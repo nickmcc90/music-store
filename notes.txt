@@ -1,0 +1,49 @@
+I will write down things I struggle with or feel are important while making this e-commerce store by miself.
+
+FONTS
+Importing a font was easy, I just changed the names around the top of layout.js and added a weight in the object
+being created.
+
+HEADER
+On the header, we remembered positioning, bg color, height, flex stuff, and padding.
+Stuff we forgot: text resizing
+cursor-pointer
+:hover stuff
+
+Giving the header a sticky classname allows the children underneath it to show. The children would be behind
+the header if it was fixed.
+
+
+
+
+1. We can store our files with google drive and use Pabbly to deliver the files from the drive to
+the user's email once a payment is made.
+
+
+Condensed steps:
+Create app
+Change permissions
+Gitignore and .env.local init
+Git init
+Gutting page.js
+Customize layout.js body tag
+Create header and footer in body tag
+Create stripe account
+Key inside .env
+Add in products in stripe
+npm i stripe
+Two async functions in page.js
+Grabbing the products server-side
+Making loading and error pages (error is use client)
+Load in product cards from a styled page.js
+Make productcard component (use client)
+Destructure props inside card
+Import route inside card
+Set route to a made /products/page passing price_id through
+Make (store) and store.js
+npm i zustand
+Write the functions and variables in store.js
+
+
+
+PABBLY STEPS
