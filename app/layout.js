@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
           <Link href={'/'}>
             <div id='start' className='text-white flex justify-center items-center gap-6 hover:scale-110 cursor-pointer'>
               <i className="fa-solid fa-music text-white text-3xl md:text-5xl"></i>
-              <h1 className="text-white">Nick's Notes</h1>
+              <h1 className="text-white">Nick&apos;s Notes</h1>
             </div>
           </Link>
           <div className="text-white flex justify-center items-center gap-10">
