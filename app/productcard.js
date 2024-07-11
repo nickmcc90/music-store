@@ -43,6 +43,13 @@ export default function ProductCard(props) {
             </div>
           ) : null
         }
+        { name.includes("Original") ? (
+            <div className='absolute top-3 right-5  h-[20px] w-[80px] bg-orange-400 
+            text-white rounded-xl flex justify-center items-center'>
+              Original
+            </div>
+          ) : null
+        }
       </div>
       <div className='flex flex-col p-2 gap-6 flex-1'>
         <p className='flex justify-center uppercase text-center text-xl sm:text-2xl md:text-3xl border-b border-solid border-black border-spacing-3'>{name}</p>
