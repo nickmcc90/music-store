@@ -42,7 +42,9 @@ Import route inside card
 Set route to a made /products/page passing price_id through
 Make (store) and store.js
 npm i zustand
-Write the functions and variables in store.js
+Write the functions and variables in store.js. (This is different, make a variable.)
+Grab the products in the product page and console.log them.
+Set up modal in store.js
 
 
 

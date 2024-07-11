@@ -3,6 +3,8 @@ import React from 'react'
 
 import { useRouter } from 'next/navigation'
 
+import useCart from './(store)/store'
+
 export default function ProductCard(props) {
 
   const { product } = props
@@ -13,8 +15,18 @@ export default function ProductCard(props) {
 
   console.log(name)
 
+  const setProduct = useCart(state => state.setProduct)
+
   function handleRoute () {
-    router.push('/prouduct?price_id=' + price_id)
+    const newProduct = {
+      price_id,
+      cost,
+      name,
+      description,
+      product_data
+    }
+    setProduct({ newProduct })
+    router.push('/product?price_id=' + price_id)
   }
 
   return (

@@ -1,7 +1,51 @@
-import React from 'react'
+import { create } from "zustand"
 
-export default function useCart() {
-  return (
-    <div>useCart</div>
-  )
-}
+
+const useCart = create(
+  (set, get) => ({
+    cart: [],
+    product: {},
+    setProduct: (params) => {
+      const { newProduct } = params
+      set((state) => {
+        return {
+          ...state,
+          product: newProduct
+        }
+      })
+    },
+    addItemToCart: (params) => {
+      const { newItem } = params
+      set((state) => {
+        const newCart = [...state.cart, newItem]
+        return {
+          ...state,
+          cart: newCart
+        }
+      })
+    },
+    removeItemFromCart: (params) => {
+      const { itemIndex } = params
+      set((state) => {
+        const newCart = state.cart.filter((ele, eleIndex) => {
+          return itemIndex !== eleIndex
+        })
+        return {
+          ...state,
+          cart: newCart
+        }
+      })
+    },
+    emptyCart: () => {
+      set((state) => {
+        const newCart = []
+        return {
+          ...state,
+          cart: newCart
+        }
+      })
+    }
+  })
+)
+
+export default useCart
