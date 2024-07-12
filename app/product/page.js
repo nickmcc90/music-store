@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import useCart from '../(store)/store'
+import VideoPlayer from '../VideoPlayer'
 
 
 export default function ProductPage(props) {
@@ -12,7 +13,7 @@ export default function ProductPage(props) {
 
   const { cost, name, description, product_data } = product
 
-  console.log(product_data.metadata.Video)
+  // console.log(product_data.metadata.Video)
 
   const addItemToCart = useCart(state => state.addItemToCart)
 
@@ -37,7 +38,7 @@ export default function ProductPage(props) {
           <p className='text-lg'>Price: ${cost/100}</p>
           <p className='text-lg'>Description: {description}</p>
           <div className='grid grid-cols-1 sm:grid-cols-2 place-items-start gap-10'>
-            <video className='' controls src={`/${product_data.metadata.Video}`} />
+            <VideoPlayer videoFilename={product_data.metadata.Video} />
             <button onClick={addHandle} className='my-auto bg-slate-600 rounded-full hover:opacity-60 text-white p-3'>Add MIDI to Cart</button>
           </div>
         </div>
@@ -45,3 +46,5 @@ export default function ProductPage(props) {
     </div>
   )
 }
+
+// <video className='' controls src={`/${product_data.metadata.Video}`} />
