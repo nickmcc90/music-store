@@ -17,7 +17,6 @@ export default async function Home() {
 
   const products = await getStripeProducts()
 
-  console.log(products)
 
   return (
     <main className="flex flex-col">

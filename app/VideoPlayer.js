@@ -5,18 +5,8 @@ const VideoPlayer = ({ videoFilename }) => {
 
   const getSignedUrl = async () => {
     try {
-      console.log('Fetching signed URL for video:', videoFilename);
       const response = await fetch(`/api/signed-url?filename=${videoFilename}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        // credentials: 'include',
-        // mode: 'cors',
-
-        // cache: 'no-cache',
-        // redirect: 'follow',
-        // referrerPolicy: 'no-referrer',
+        method: 'GET'
       });
       const data = await response.json();
       setSignedUrl(data.signedUrl);
@@ -27,7 +17,7 @@ const VideoPlayer = ({ videoFilename }) => {
 
   useEffect(() => {
     getSignedUrl();
-  }, [videoFilename]);
+  }, []);
 
   return (
     <div>

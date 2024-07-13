@@ -13,7 +13,7 @@ export default function ProductCard(props) {
 
   const router = useRouter()
 
-  console.log(name)
+
 
   const setProduct = useCart(state => state.setProduct)
 
