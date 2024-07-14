@@ -1,0 +1,7 @@
+[build]
+  command = "cp secret/nth-station-429122-r2-731e78e32c0f.json public/secrets/"
+  publish = "public"
+
+[plugins]
+  [plugins.netlify-plugin-purgecss]
+    package = "netlify-plugin-purgecss"
