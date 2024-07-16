@@ -44,7 +44,13 @@ Make (store) and store.js
 npm i zustand
 Write the functions and variables in store.js. (This is different, make a variable.)
 Grab the products in the product page and console.log them.
+Set up the crazy GCP configs (will have a tutorial for this soon)
 Set up modal in store.js
+Add to cart function on buttons.
+Persist data with zustand.
+Make sure you can only add one item to cart and not increase the value with the same item.
+
+
 
 
 

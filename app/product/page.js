@@ -11,20 +11,40 @@ export default function ProductPage(props) {
 
   const product = useCart(state => state.product)
 
+  console.log(product)
+
   const { cost, name, description, product_data } = product
+
+  const cart = useCart(state => state.cart)
+
+
 
   // console.log(product_data.metadata.Video)
 
   const addItemToCart = useCart(state => state.addItemToCart)
 
   function addHandle() {
-    const newItem = {
-      cost,
-      name,
-      price_id
+    // if statement to see if the item is in the cart already
+    let same = cart.filter((item) => {
+      return item.name === cart.name 
+    })
+
+    
+    if(same) {
+      alert("Added to cart already.")
+      return
+    } else {
+      const newItem = {
+        cost,
+        name,
+        price_id
+      }
+
+  
+      addItemToCart({ newItem })
+
     }
 
-    addItemToCart({ newItem })
   }
 
 
