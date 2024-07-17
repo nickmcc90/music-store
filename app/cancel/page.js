@@ -9,7 +9,7 @@ export default function Success() {
             Nick&apos;s notes
           </div>
           <div className="text-xl font-thin">
-            We're sorry for the cancellation!
+            We&apos;re sorry for the cancellation!
           </div>
         </div>
         <div className='flex gap-[150px]'>
