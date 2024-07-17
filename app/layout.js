@@ -1,9 +1,7 @@
 import { Hind } from "next/font/google";
 import "./globals.css";
-import { COLORS, SHADOWS } from '../constants/page'
-import Link from 'next/link'
-import Header from "./header";
-// import Button from './button'
+
+import Header from './header'
 
 const hind = Hind({ 
   subsets: ["latin"],
@@ -25,7 +23,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={'flex flex-col min-h-screen bg-white ' + hind.className}>
         <Header/>
-        <div className="flex-1 p-8">
+        <div className="flex-1">
           {children}
         </div>
         <div id='portal'></div>

@@ -39,6 +39,7 @@ const useCart = create(
         const { itemIndex } = params
         set((state) => {
           const newCart = state.cart.filter((ele, eleIndex) => {
+            console.log(itemIndex)
             return itemIndex !== eleIndex
           })
           return {

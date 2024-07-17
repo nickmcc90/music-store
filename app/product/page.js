@@ -11,13 +11,11 @@ export default function ProductPage(props) {
 
   const product = useCart(state => state.product)
 
-  console.log(product)
-
   const { cost, name, description, product_data } = product
 
   const cart = useCart(state => state.cart)
 
-
+  console.log(cart)
 
   // console.log(product_data.metadata.Video)
 
@@ -25,12 +23,13 @@ export default function ProductPage(props) {
 
   function addHandle() {
     // if statement to see if the item is in the cart already
-    let same = cart.filter((item) => {
-      return item.name === cart.name 
-    })
 
+    let same = cart.filter((item) => {
+      console.log(item)
+      return item.name === name
+    })
     
-    if(same) {
+    if(same.length > 0) {
       alert("Added to cart already.")
       return
     } else {
@@ -49,7 +48,7 @@ export default function ProductPage(props) {
 
 
   return (
-    <div className='flex flex-col gap-7'>
+    <div className='flex flex-col gap-7 p-8'>
       <div className='uppercase border-b text-2xl sm:text-3xl md:text-4xl'>
         {name}
       </div>

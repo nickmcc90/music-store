@@ -49,9 +49,29 @@ Set up modal in store.js
 Add to cart function on buttons.
 Persist data with zustand.
 Make sure you can only add one item to cart and not increase the value with the same item.
-
+---
+Then remove item from cart integration
+Then fix the add to cart same issue
+Then add a big checkout button to the bottom
+Then route checkout
 
 
 
 
 PABBLY STEPS
+Stripe and google drive integration platform
+1. Create stripe account
+2. Blue plug connect button
+3. Workflow left tab
+4. Create workflow, name it stripe to google drive
+5. Choose stripe app
+6. Trigger: new charge
+7. Copy webhook
+8. Go to stripe > Developers > webhooks
+9. Add end point and paste in the webhook
+10. Do a test payment
+11. Go to Pabbly and see that the data is captured.
+12. Choose google drive in the second step.
+13. Action event: share a file
+14. Connect your google drive account with the items.
+15. Automate workflow after choosing the file to send based on retrieved data.
