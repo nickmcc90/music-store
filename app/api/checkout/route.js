@@ -3,6 +3,8 @@ import Stripe from 'stripe'
 
 export async function POST(request) {
 
+  const clientDOMAIN = 'https://music-store-ashy.vercel.app'
+
   const body = await request.json()
 
   if(body.lineItems.length === 0) {
@@ -19,8 +21,8 @@ export async function POST(request) {
 
     const session = await stripe.checkout.sessions.create({
       line_items: body.lineItems,
-      success_url: 'http://localhost:3000/success',
-      cancel_url: 'http://localhost:3000/cancel',
+      success_url: `${clientDOMAIN}/success`,
+      cancel_url: `${clientDOMAIN}/cancel`,
       mode: 'payment'
     })
 
